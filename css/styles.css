@@ -12,7 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -20,23 +22,28 @@ html {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 5s linear;
+    -webkit-animation: dash 5s linear;
+    -moz-animation: dash 5s linear;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes dash {
-    from {
-      stroke-dashoffset: 1000;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
 
-  .loader-rectangle {
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.loader-rectangle {
     stroke: #64ffda;
     stroke-width: 5px;
     fill: none;
-  }
+}
 
 
 #loader {
@@ -50,36 +57,46 @@ html {
     background-color: var(--background);
     z-index: 12;
     animation: fadeout 1s 3.5s;
+    -webkit-animation: fadeout 1s 3.5s;
+    -moz-animation: fadeout 1s 3.5s;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
 }
 
 @keyframes fadeout {
     from {
-      opacity: 1;
+        opacity: 1;
     }
-    to {
-      opacity: 0;
-      z-index: -10;
-    }
-  }
 
-  #logo-svg text {
+    to {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+#logo-svg text {
     font-family: 'Merriweather', serif;
     fill: #64ffda;
     animation: fadein 0.5s linear 2s;
+    -webkit-animation: fadein 0.5s linear 2s;
+    -moz-animation: fadein 0.5s linear 2s;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
     opacity: 0;
     font-size: 60px;
 }
 
 @keyframes fadein {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 #loader-container {
     max-width: 100px;
@@ -90,22 +107,26 @@ html {
     margin: 0 auto;
     fill: none;
     animation: goinitial 1s 3s;
+    -webkit-animation: goinitial 1s 3s;
+    -moz-animation: goinitial 1s 3s;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
     transform-origin: center;
     z-index: 13;
 }
 
 #logo-svg {
-    transform: translate(calc(50vw - 88px),calc(50vh - 50px));
+    transform: translate(calc(50vw - 88px), calc(50vh - 50px));
 }
 
 @keyframes goinitial {
     to {
-      transform:translate(0,0);
-      width: 52px;
-      /* opacity: 0; */
+        transform: translate(0, 0);
+        width: 52px;
+        /* opacity: 0; */
     }
-  }
+}
 
 body {
     margin: 0;
@@ -116,7 +137,12 @@ body {
     height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     color: #ccd6f6;
     line-height: 1.1;
@@ -131,7 +157,6 @@ p {
     width: 100%;
     height: 100px;
     position: fixed;
-    padding: 0px 50px;
     background-color: rgba(10, 25, 47, 0.85);
     align-items: center;
     justify-content: space-between;
@@ -169,7 +194,7 @@ ul li {
     z-index: 10;
 }
 
-#hamburger #close-icon{
+#hamburger #close-icon {
     display: none;
 }
 
@@ -186,14 +211,16 @@ ul li {
     bottom: 0px;
     right: 0px;
     padding: 50px 10px;
-    width: min(75vw, 400px); /*change size according to window size*/
+    width: min(75vw, 400px);
+    /*change size according to window size*/
     height: 100vh;
     background-color: #112240;
     box-shadow: -10px 0px 30px -15px #112240;
     z-index: 9;
-    transform: translateX(100vw); /*make it zero when hambuger icon is clicked*/
+    transform: translateX(100vw);
+    /*make it zero when hambuger icon is clicked*/
     visibility: visible;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #right-menu.open {
@@ -223,7 +250,7 @@ ul li {
     position: relative;
     margin: 0px auto 20px;
     counter-increment: item 1;
-    font-size: clamp(14px,4vw,18px);
+    font-size: clamp(14px, 4vw, 18px);
 }
 
 #right-menu ol li::before {
@@ -244,7 +271,7 @@ ul li {
     line-height: 1;
     text-decoration: none;
     /* cursor: pointer; */
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     padding: 18px 50px;
     margin: 10% auto 0px;
     width: max-content;
@@ -478,7 +505,8 @@ section {
 .section-headings::before {
     position: relative;
     counter-increment: section 1;
-    content: "0" counter(section) "."; /*display sequence number beside heading*/
+    content: "0" counter(section) ".";
+    /*display sequence number beside heading*/
     margin-right: 10px;
     color: var(--green);
     font-family: 'Roboto Mono', monospace;
@@ -672,7 +700,7 @@ section {
     fill: currentColor;
     width: 30px;
     height: 30px;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #left-list li a svg:hover {
@@ -684,19 +712,20 @@ section {
     color: var(--green);
 }
 
-.resume-link a:hover, #hire-me:hover {
+.resume-link a:hover,
+#hire-me:hover {
     background-color: #233554;
 }
 
 footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: auto;
-        min-height: 70px;
-        padding: 15px;
-        text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
 }
 
 #footer-content {
@@ -728,7 +757,7 @@ footer {
         border-radius: 5px;
         box-shadow: 0 10px 30px 5px rgba(2, 12, 27, 0.7);
     }
-    
+
 
     .proj-image-container {
         display: none;
@@ -758,7 +787,7 @@ footer {
         text-align: left;
         justify-content: flex-end;
     }
-    
+
     .text-left .project-links {
         justify-content: flex-end;
     }
@@ -780,4 +809,9 @@ footer {
     main {
         padding: 0px 40px;
     }
+
+    .header {
+        padding: 0px 40px;
+    }
+
 }
