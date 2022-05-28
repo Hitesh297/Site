@@ -123,7 +123,7 @@ html {
 @keyframes goinitial {
     to {
         transform: translate(0, 0);
-        width: 52px;
+        width: 40px;
         /* opacity: 0; */
     }
 }
