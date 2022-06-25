@@ -556,11 +556,10 @@ section {
 /*Remove this later*/
 #experience-content {
     display: flex;
-    height: 340px;
 }
 
 #experience {
-    max-width: 700px;
+    /* max-width: 700px; */
 }
 
 
@@ -772,6 +771,8 @@ section {
     font-size: 15px;
     margin: 0;
     display: block;
+    text-align: justify;
+
 }
 
 #role-description ul {
