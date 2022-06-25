@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div id="loader"></div>
         <nav class="navigation">
             <a href="#" id="logo-container">
@@ -171,8 +171,38 @@
                 Experience
             </h2>
             <div id="experience-content">
-                <div id="experience-text">
-                    Content here.
+                <div id="company-list">
+                    <button data-tab="1" id="tab-0" class="tabs active">SLK Software</button>
+                    <button data-tab="2" id="tab-1" class="tabs">ABC Software</button>
+                    <div id="company-selector"></div>
+                </div>
+                <div id="role-description">
+                    <div class="content__section visible" data-tab="1">
+                        <h3>
+                            <span>Software Engineer</span>
+                            <span class="company">@SLK Software</span>
+                        </h3>
+                        <p class="duration">Feb 2015 - Dec 2021</p>
+                        <ul>
+                            <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+                            <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+                            <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+                            <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+                        </ul>
+                    </div>
+                    <div class="content__section" data-tab="2">
+                        <h3>
+                            <span>Software Engineer</span>
+                            <span class="company">@ABC Software</span>
+                        </h3>
+                        <p class="duration">Feb 2015 - Dec 2021</p>
+                        <ul>
+                            <li>Write modern, performant, maintainable code for a </li>
+                            <li>Write modern, performant, maintainable  projects</li>
+                            <li>Write modern, performant, maintainable code for a diverse projects</li>
+                            <li>Write modern, performant, maintainable code for a diverse array ofprojects</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
