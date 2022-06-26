@@ -89,6 +89,7 @@ html {
     font-size: 60px;
 }
 
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -135,6 +136,19 @@ body {
     font-family: 'Inter', sans-serif;
     counter-reset: item section;
     height: 100%;
+    animation: enablescroll 0.2 3s;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.activescroll {
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 h1,
