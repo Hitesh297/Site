@@ -32,6 +32,23 @@ var currentScrollPos = window.pageYOffset;
     document.getElementById("header").style.top = "-100px";
   }
   prevScrollpos = currentScrollPos;
+
+  // slide and show section
+  var reveals = document.querySelectorAll('.reveal');
+
+    for (let i = 0; i< reveals.length; i++) {
+    
+      var windowheight = window.innerHeight;
+      var revealtop = reveals[i].getBoundingClientRect().top;
+      var revealpoint = 150;
+
+      if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('activescroll');
+      }else{
+        reveals[i].classList.remove('activescroll');
+      }
+     
+    }
 }
 
 
@@ -72,22 +89,8 @@ function handleClick(e) {
   
 
 
-  window.addEventListener('scroll', reveal);
+  // window.addEventListener('scroll', reveal);
 
-  function reveal() {
-    var reveals = document.querySelectorAll('.reveal');
-
-    for (let i = 0; i< reveals.length; i++) {
+  // function reveal() {
     
-      var windowheight = window.innerHeight;
-      var revealtop = reveals[i].getBoundingClientRect().top;
-      var revealpoint = 150;
-
-      if (revealtop < windowheight - revealpoint) {
-          reveals[i].classList.add('activescroll');
-      }else{
-        reveals[i].classList.remove('activescroll');
-      }
-     
-    }
-  }
+  // }

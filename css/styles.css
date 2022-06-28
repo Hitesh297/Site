@@ -139,22 +139,6 @@ body {
     animation: enablescroll 0.2 3s;
 }
 
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-}
-
-.reveal.activescroll {
-    transform: translateY(0px);
-    opacity: 1;
-}
-
 h1,
 h2,
 h3,
@@ -821,6 +805,22 @@ section {
 
 .active {
     color: var(--green);
+}
+
+.reveal {
+    /* position: relative; */
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.reveal.activescroll {
+    transform: none;
+    opacity: 1;
 }
 
 
