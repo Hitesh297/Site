@@ -497,6 +497,19 @@ section {
     max-width: 900px;
 }
 
+#aboutme-img-container img {
+    /* filter: opacity(70%); */
+    mix-blend-mode: luminosity;
+    border: 1px solid var(--green);
+    transition: all 0.5s ease;
+}
+
+#aboutme-img-container img:hover {
+    /* filter: opacity(100%); */
+    mix-blend-mode: normal;
+    box-shadow: 2px 1px 2px 1px rgba(100, 255, 218);
+}
+
 
 /*style section heading*/
 .section-headings {
@@ -572,9 +585,6 @@ section {
 }
 
 .project-list-item {
-    /* margin-bottom: 80px; */
-    /* margin-top: 100px;
-    margin-bottom: 100px; */
     padding-top: 30px;
     padding-bottom: 70px;
 }
@@ -589,7 +599,7 @@ section {
 
 .proj-image-container img {
     opacity: .5;
-    transition: all .5s cubic-bezier(.075, .82, .165, 1);
+    transition: all 0.5s ease;
     border-radius: 4px;
     box-shadow: 0 10px 30px 10px rgba(2, 12, 27, 0.7);
 
