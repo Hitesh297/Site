@@ -89,13 +89,17 @@ function handleClick(e) {
   
 
   // window.addEventListener('scroll', reveal);
+  window.setTimeout(function(){
+    var roletitle = document.getElementById('role-title');
+    var options = {
+      strings: ['Software Engineer', 'Full Stack Developer', 'Web Developer'],
+      typeSpeed:50,
+      backSpeed:20,
+      backDelay:2000,
+      loop:true
+    };
 
-  var options = {
-    strings: ['Software Engineer', 'Web Developer', 'Full Stack Developer'],
-    typeSpeed:50,
-    backSpeed:20,
-    backDelay:2000,
-    loop:true
-  };
-
-  var typed = new Typed('.auto-type', options);
+    roletitle.innerText = '';
+    roletitle.classList.add('auto-type');
+    var typed = new Typed('.auto-type', options);
+}, 6000);
