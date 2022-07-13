@@ -88,9 +88,14 @@ function handleClick(e) {
   }
   
 
-
   // window.addEventListener('scroll', reveal);
 
-  // function reveal() {
-    
-  // }
+  var options = {
+    strings: ['Software Engineer', 'Web Developer', 'Full Stack Developer'],
+    typeSpeed:50,
+    backSpeed:20,
+    backDelay:2000,
+    loop:true
+  };
+
+  var typed = new Typed('.auto-type', options);
