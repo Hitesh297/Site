@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 :root {
     --green: #64ffda;
@@ -488,7 +489,7 @@ body::-webkit-scrollbar-thumb {
 
 section {
     margin: 0px auto;
-    padding: 100px 0px;
+    padding: 95px 0px;
     max-width: 1000px;
 }
 
@@ -526,6 +527,7 @@ section {
 .aboutme-content {
     display: flex;
     gap: 5rem;
+    justify-content: center;
 }
 
 #aboutme {
@@ -535,6 +537,7 @@ section {
 #aboutme-img-container {
     background-color: var(--green);
     border-radius: 5px;
+    height: fit-content;
 }
 
 #aboutme-img-container img {
@@ -563,7 +566,59 @@ section {
 
 .aboutme-content ul li {
     font-size: 1rem;
-    padding: 0.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.credential-item h4 {
+    display: inline;
+    text-align: left;
+}
+
+.credential-item p {
+    margin-top: 5px;
+    padding-left: 29px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.credential-title h4 {
+    margin: 0;
+}
+
+.credential-title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/*Styles for Skill Section*/
+.skills-item {
+    text-align: center;
+    flex-basis: 25%;
+}
+
+.skills-item i {
+    font-size: 75px;
+}
+
+.skills-item i:hover {
+    color: var(--green);
+}
+
+.skills-item h3 {
+    font-size: large;
+}
+
+.skills-item p {
+    font-size: initial;
+}
+
+#skills-list {
+    justify-content: center;
+    gap: 85px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 /*Remove this later*/
@@ -707,21 +762,17 @@ section {
     fill: var(--green);
 }
 
-#left-list li a svg {
-    fill: currentColor;
-    width: 30px;
-    height: 30px;
+#left-list .social {
+    color: #8892b0;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-size: 23px;
 }
 
-#left-list li a svg:hover {
-    fill: var(--green);
+#left-list .social:hover {
+    color: var(--green);
     transform: translateY(-10%);
 }
 
-#right a:hover {
-    color: var(--green);
-}
 
 .resume-link a:hover,
 #hire-me:hover {
@@ -800,6 +851,54 @@ section {
 
 .content__section h3 {
     margin: 11px 0 3px 0;
+}
+
+/* Contact Section */
+.form-control {
+    width: 100%;
+    color: var(--green);
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 4px;
+    background-color: #112240;
+    padding: 6px 12px;
+    font-family: 'Roboto Mono', monospace;
+    max-width: 800px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border: 1px solid var(--green);
+    box-shadow: 0 0 5px var(--green);
+    
+}
+
+.form-control::placeholder {
+    color: #8892B0;
+}
+
+#submit-button {
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--green);
+    padding: 0.6rem 1rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+#submit-button:hover {
+    background-color: #233554;
+    cursor: pointer;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
 .visible {
