@@ -405,6 +405,10 @@ ul li {
     letter-spacing: 0.1em;
 }
 
+#right a:hover {
+    color: var(--green);
+}
+
 main {
     margin: 0px auto;
     width: 100%;
@@ -489,7 +493,7 @@ body::-webkit-scrollbar-thumb {
 
 section {
     margin: 0px auto;
-    padding: 95px 0px;
+    padding: 50px 0px;
     max-width: 1000px;
 }
 
@@ -499,7 +503,7 @@ section {
 .section-headings {
     display: flex;
     align-items: center;
-    margin: 10px 0px 40px;
+    margin: 10px 0px 65px;
 }
 
 .section-headings::before {
@@ -558,6 +562,10 @@ section {
     text-align: justify;
 }
 
+#aboutme-text p {
+    margin-top: 0;
+}
+
 
 .aboutme-content ul {
     display: block;
@@ -568,6 +576,10 @@ section {
     font-size: 1rem;
     padding: 0;
     margin: 0;
+}
+
+#credential-details {
+    margin-top: 4rem;
 }
 
 .credential-item h4 {
@@ -596,6 +608,7 @@ section {
 .skills-item {
     text-align: center;
     flex-basis: 25%;
+    flex-grow: 1;
 }
 
 .skills-item i {
@@ -619,6 +632,8 @@ section {
     gap: 85px;
     flex-wrap: wrap;
     align-items: center;
+    padding-left: 0;
+    padding-top: 3rem;
 }
 
 /*Remove this later*/
@@ -754,12 +769,13 @@ section {
     gap: 1rem;
 }
 
-.project-links svg {
-    fill: #ccd6f6;
+.project-links a {
+    color: #ccd6f6;
+    font-size: 1.4rem;
 }
 
-.project-links svg:hover {
-    fill: var(--green);
+.project-links a:hover {
+    color: var(--green);
 }
 
 #left-list .social {
@@ -854,6 +870,12 @@ section {
 }
 
 /* Contact Section */
+#contact-message {
+    max-width: 500px;
+    line-height: 1.6;
+    text-align: center;
+}
+
 .form-control {
     width: 100%;
     color: var(--green);
@@ -1026,6 +1048,10 @@ footer {
 
     .header {
         padding: 0px 40px;
+    }
+
+    #experience-content {
+        flex-wrap: wrap;
     }
 
 }
